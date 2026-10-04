@@ -1,0 +1,56 @@
+name: Auth Windows build (test only)
+on:
+  workflow_dispatch:
+    inputs:
+      auth_commit:
+        description: Full commit SHA from neeraj-pilot/ente
+        required: true
+permissions:
+  contents: read
+jobs:
+  windows:
+    runs-on: windows-2022
+    timeout-minutes: 45
+    steps:
+      - name: Require an immutable source revision
+        shell: pwsh
+        env:
+          AUTH_COMMIT: ${{ inputs.auth_commit }}
+        run: |
+          if ($env:AUTH_COMMIT -cnotmatch '^[0-9a-f]{40}$') { throw 'Provide a full commit SHA' }
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          repository: neeraj-pilot/ente
+          ref: ${{ inputs.auth_commit }}
+          submodules: recursive
+          persist-credentials: false
+      - uses: ./.github/actions/setup-flutter
+      - name: Enable Git long paths
+        run: git config --global core.longpaths true
+      - name: Resolve locked dependencies
+        working-directory: mobile
+        run: flutter pub get --enforce-lockfile
+      - name: Generate shared localizations
+        working-directory: mobile/packages/strings
+        run: flutter gen-l10n
+      - name: Analyze Auth
+        working-directory: mobile/apps/auth
+        run: flutter analyze --no-pub
+      - name: Test Auth
+        working-directory: mobile/apps/auth
+        run: flutter test --no-pub --reporter expanded
+      - name: Build unsigned Windows app
+        working-directory: mobile/apps/auth
+        run: flutter build windows --release --no-pub
+      - name: Record build source
+        working-directory: mobile/apps/auth
+        shell: pwsh
+        run: |
+          git rev-parse HEAD | Set-Content build/windows/x64/runner/Release/SOURCE_COMMIT.txt
+          flutter --version | Set-Content build/windows/x64/runner/Release/FLUTTER_VERSION.txt
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: auth-windows-test-${{ inputs.auth_commit }}
+          path: mobile/apps/auth/build/windows/x64/runner/Release/
+          if-no-files-found: error
+          retention-days: 14
