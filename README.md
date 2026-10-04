@@ -60,7 +60,9 @@ The artifact `auth-window-restoration-windows` includes the complete runnable bu
 
 Local macOS validation: **15 tests passed**, with clean formatting and analysis. Geometry tests cover four taskbar work-area shapes, negative monitor coordinates, simulated DPI/layout changes, monitor removal, serialization, and maximize/minimize/startup state handling. Session tests use mocked native channels and real temporary files to verify use of native normal geometry, recovery after a failed write, and close cleanup after a failed flush. These are host tests, not Windows device tests.
 
-Windows compilation and the programmatic restart checks are **pending the first workflow run**. No Windows GUI behavior is claimed yet.
+The [first Windows workflow run](https://github.com/neeraj-pilot/ente-auth-window-restore-lab/actions/runs/37205584654), at commit `4f20ca4`, passed the dependency audit, formatting, analysis, all 15 tests, and release compilation. On Windows Server 2022, the native probe observed one 1024×768 display at 96 DPI with a 1024×728 work area. The baseline wrote its initial state/report, then exited with `0xC000041D` during shutdown. The harness correctly failed; restart and candidate checks did not run. The artifact includes the executable and initial snapshots.
+
+The next candidate requests native close after disabling close prevention. In `window_manager` 0.5.1, `destroy()` only posts `WM_QUIT`; `close()` sends the window through the runner's normal destruction path before COM shutdown. This is a source-backed lifecycle correction, but the exact crash cause and whether this change resolves it still require a Windows rerun. The nonzero-exit check remains strict.
 
 Even a passing hosted Windows run does not establish:
 

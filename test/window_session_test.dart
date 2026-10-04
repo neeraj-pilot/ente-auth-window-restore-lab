@@ -93,10 +93,10 @@ void main() {
     );
   });
 
-  test('close destroys the window even when flushing fails', () async {
+  test('close requests native closure even when flushing fails', () async {
     await Directory('${session.stateFile.path}.tmp').create();
     calls.clear();
     await expectLater(session.close(), throwsA(isA<FileSystemException>()));
-    expect(calls, ['setPreventClose', 'destroy']);
+    expect(calls, ['setPreventClose', 'close']);
   });
 }

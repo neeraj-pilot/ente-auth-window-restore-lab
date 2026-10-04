@@ -148,7 +148,7 @@ class WindowSession with WindowListener {
     } finally {
       windowManager.removeListener(this);
       await windowManager.setPreventClose(false);
-      await windowManager.destroy();
+      await windowManager.close();
     }
   }
 }
