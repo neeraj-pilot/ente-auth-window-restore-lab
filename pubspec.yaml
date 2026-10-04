@@ -1,0 +1,15 @@
+name: auth_window_restore_lab
+description: Isolated Windows reproduction and restoration experiments for Ente Auth 1883.
+publish_to: none
+version: 0.1.0+1
+environment:
+  sdk: '>=3.13.0 <4.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  window_manager: 0.5.1
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+flutter:
+  uses-material-design: true

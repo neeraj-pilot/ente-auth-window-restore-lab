@@ -1,0 +1,11 @@
+analyzer:
+  errors:
+    unused_import: error
+  exclude:
+    - build/**
+    - windows/**
+linter:
+  rules:
+    - unawaited_futures
+    - cancel_subscriptions
+    - avoid_print

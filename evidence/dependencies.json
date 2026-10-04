@@ -1,0 +1,354 @@
+{
+  "checkedAt": "2026-10-04T12:59:27.148354+00:00",
+  "packages": [
+    {
+      "name": "async",
+      "version": "2.13.1",
+      "archiveSha256": "e2eb0491ba5ddb6177742d2da23904574082139b07c1e33b8503b9f46f3e1a37",
+      "repository": "https://github.com/dart-lang/core/tree/main/pkgs/async",
+      "homepage": null,
+      "advisories": {
+        "advisories": [],
+        "advisoriesUpdated": "1970-01-01T00:00:00.000"
+      },
+      "metadataUrl": "https://pub.dev/api/packages/async/versions/2.13.1"
+    },
+    {
+      "name": "boolean_selector",
+      "version": "2.1.2",
+      "archiveSha256": "8aab1771e1243a5063b8b0ff68042d67334e3feab9e95b9490f9a6ebf73b42ea",
+      "repository": "https://github.com/dart-lang/tools/tree/main/pkgs/boolean_selector",
+      "homepage": null,
+      "advisories": {
+        "advisories": [],
+        "advisoriesUpdated": "1970-01-01T00:00:00.000"
+      },
+      "metadataUrl": "https://pub.dev/api/packages/boolean_selector/versions/2.1.2"
+    },
+    {
+      "name": "characters",
+      "version": "1.4.1",
+      "archiveSha256": "faf38497bda5ead2a8c7615f4f7939df04333478bf32e4173fcb06d428b5716b",
+      "repository": "https://github.com/dart-lang/core/tree/main/pkgs/characters",
+      "homepage": null,
+      "advisories": {
+        "advisories": [],
+        "advisoriesUpdated": "1970-01-01T00:00:00.000"
+      },
+      "metadataUrl": "https://pub.dev/api/packages/characters/versions/1.4.1"
+    },
+    {
+      "name": "clock",
+      "version": "1.1.3",
+      "archiveSha256": "e51d50bca3217c9a9fa2b41a30e4a38971133f5f9ec7a3d57bae095007f1d28e",
+      "repository": "https://github.com/dart-lang/tools/tree/main/pkgs/clock",
+      "homepage": null,
+      "advisories": {
+        "advisories": [],
+        "advisoriesUpdated": "1970-01-01T00:00:00.000"
+      },
+      "metadataUrl": "https://pub.dev/api/packages/clock/versions/1.1.3"
+    },
+    {
+      "name": "collection",
+      "version": "1.19.1",
+      "archiveSha256": "2f5709ae4d3d59dd8f7cd309b4e023046b57d8a6c82130785d2b0e5868084e76",
+      "repository": "https://github.com/dart-lang/core/tree/main/pkgs/collection",
+      "homepage": null,
+      "advisories": {
+        "advisories": [],
+        "advisoriesUpdated": "1970-01-01T00:00:00.000"
+      },
+      "metadataUrl": "https://pub.dev/api/packages/collection/versions/1.19.1"
+    },
+    {
+      "name": "fake_async",
+      "version": "1.3.3",
+      "archiveSha256": "5368f224a74523e8d2e7399ea1638b37aecfca824a3cc4dfdf77bf1fa905ac44",
+      "repository": "https://github.com/dart-lang/test/tree/master/pkgs/fake_async",
+      "homepage": null,
+      "advisories": {
+        "advisories": [],
+        "advisoriesUpdated": "1970-01-01T00:00:00.000"
+      },
+      "metadataUrl": "https://pub.dev/api/packages/fake_async/versions/1.3.3"
+    },
+    {
+      "name": "json_annotation",
+      "version": "4.12.0",
+      "archiveSha256": "2a743920d81b7910627f68ee2c9ac1fc0bfee32b9fc3403587d7c6791ca12f80",
+      "repository": "https://github.com/google/json_serializable.dart/tree/master/json_annotation",
+      "homepage": null,
+      "advisories": {
+        "advisories": [],
+        "advisoriesUpdated": "1970-01-01T00:00:00.000"
+      },
+      "metadataUrl": "https://pub.dev/api/packages/json_annotation/versions/4.12.0"
+    },
+    {
+      "name": "leak_tracker",
+      "version": "11.0.2",
+      "archiveSha256": "33e2e26bdd85a0112ec15400c8cbffea70d0f9c3407491f672a2fad47915e2de",
+      "repository": "https://github.com/dart-lang/leak_tracker/tree/main/pkgs/leak_tracker",
+      "homepage": null,
+      "advisories": {
+        "advisories": [],
+        "advisoriesUpdated": "1970-01-01T00:00:00.000"
+      },
+      "metadataUrl": "https://pub.dev/api/packages/leak_tracker/versions/11.0.2"
+    },
+    {
+      "name": "leak_tracker_flutter_testing",
+      "version": "3.0.10",
+      "archiveSha256": "1dbc140bb5a23c75ea9c4811222756104fbcd1a27173f0c34ca01e16bea473c1",
+      "repository": "https://github.com/dart-lang/leak_tracker/tree/main/pkgs/leak_tracker_flutter_testing",
+      "homepage": null,
+      "advisories": {
+        "advisories": [],
+        "advisoriesUpdated": "1970-01-01T00:00:00.000"
+      },
+      "metadataUrl": "https://pub.dev/api/packages/leak_tracker_flutter_testing/versions/3.0.10"
+    },
+    {
+      "name": "leak_tracker_testing",
+      "version": "3.0.2",
+      "archiveSha256": "8d5a2d49f4a66b49744b23b018848400d23e54caf9463f4eb20df3eb8acb2eb1",
+      "repository": "https://github.com/dart-lang/leak_tracker/tree/main/pkgs/leak_tracker_testing",
+      "homepage": null,
+      "advisories": {
+        "advisories": [],
+        "advisoriesUpdated": "1970-01-01T00:00:00.000"
+      },
+      "metadataUrl": "https://pub.dev/api/packages/leak_tracker_testing/versions/3.0.2"
+    },
+    {
+      "name": "matcher",
+      "version": "0.12.20",
+      "archiveSha256": "31bd099b47c10cd1aeb55146a2d46ce0277630ecef3f7dae54ad7873f36696cd",
+      "repository": "https://github.com/dart-lang/test/tree/master/pkgs/matcher",
+      "homepage": null,
+      "advisories": {
+        "advisories": [],
+        "advisoriesUpdated": "1970-01-01T00:00:00.000"
+      },
+      "metadataUrl": "https://pub.dev/api/packages/matcher/versions/0.12.20"
+    },
+    {
+      "name": "material_color_utilities",
+      "version": "0.13.0",
+      "archiveSha256": "9c337007e82b1889149c82ed242ed1cb24a66044e30979c44912381e9be4c48b",
+      "repository": "https://github.com/material-foundation/material-color-utilities/tree/main/dart",
+      "homepage": null,
+      "advisories": {
+        "advisories": [],
+        "advisoriesUpdated": "1970-01-01T00:00:00.000"
+      },
+      "metadataUrl": "https://pub.dev/api/packages/material_color_utilities/versions/0.13.0"
+    },
+    {
+      "name": "meta",
+      "version": "1.18.3",
+      "archiveSha256": "c82594181e3312f3d0695fc95aaaf7758d75b8d4ae2bbecf223b9fd5109a059d",
+      "repository": "https://github.com/dart-lang/sdk/tree/main/pkg/meta",
+      "homepage": null,
+      "advisories": {
+        "advisories": [],
+        "advisoriesUpdated": "1970-01-01T00:00:00.000"
+      },
+      "metadataUrl": "https://pub.dev/api/packages/meta/versions/1.18.3"
+    },
+    {
+      "name": "path",
+      "version": "1.9.1",
+      "archiveSha256": "75cca69d1490965be98c73ceaea117e8a04dd21217b37b292c9ddbec0d955bc5",
+      "repository": "https://github.com/dart-lang/core/tree/main/pkgs/path",
+      "homepage": null,
+      "advisories": {
+        "advisories": [],
+        "advisoriesUpdated": "1970-01-01T00:00:00.000"
+      },
+      "metadataUrl": "https://pub.dev/api/packages/path/versions/1.9.1"
+    },
+    {
+      "name": "plugin_platform_interface",
+      "version": "2.1.8",
+      "archiveSha256": "4820fbfdb9478b1ebae27888254d445073732dae3d6ea81f0b7e06d5dedc3f02",
+      "repository": "https://github.com/flutter/packages/tree/main/packages/plugin_platform_interface",
+      "homepage": null,
+      "advisories": {
+        "advisories": [],
+        "advisoriesUpdated": "1970-01-01T00:00:00.000"
+      },
+      "metadataUrl": "https://pub.dev/api/packages/plugin_platform_interface/versions/2.1.8"
+    },
+    {
+      "name": "screen_retriever",
+      "version": "0.2.1",
+      "archiveSha256": "42cc3b402a0f67d2455a0d067553d0f13453f6a008d98eababf8b63958d506bd",
+      "repository": null,
+      "homepage": "https://github.com/leanflutter/screen_retriever",
+      "advisories": {
+        "advisories": [],
+        "advisoriesUpdated": "1970-01-01T00:00:00.000"
+      },
+      "metadataUrl": "https://pub.dev/api/packages/screen_retriever/versions/0.2.1"
+    },
+    {
+      "name": "screen_retriever_linux",
+      "version": "0.2.1",
+      "archiveSha256": "2a476f1a5538065bc5badf376cfdc83d6ecf07d77eb2391b9c2bff5a76970048",
+      "repository": "https://github.com/leanflutter/screen_retriever/tree/main/packages/screen_retriever_linux",
+      "homepage": null,
+      "advisories": {
+        "advisories": [],
+        "advisoriesUpdated": "1970-01-01T00:00:00.000"
+      },
+      "metadataUrl": "https://pub.dev/api/packages/screen_retriever_linux/versions/0.2.1"
+    },
+    {
+      "name": "screen_retriever_macos",
+      "version": "0.2.1",
+      "archiveSha256": "b5abb900fcb86614ff10b738b34e37b9e1d03b0447280668e2bc8a98bdc7bd59",
+      "repository": "https://github.com/leanflutter/screen_retriever/tree/main/packages/screen_retriever_macos",
+      "homepage": null,
+      "advisories": {
+        "advisories": [],
+        "advisoriesUpdated": "1970-01-01T00:00:00.000"
+      },
+      "metadataUrl": "https://pub.dev/api/packages/screen_retriever_macos/versions/0.2.1"
+    },
+    {
+      "name": "screen_retriever_platform_interface",
+      "version": "0.2.1",
+      "archiveSha256": "3af22d926bedf20c2caa308eea376776451a3af125919ce072e56525fded8901",
+      "repository": null,
+      "homepage": "https://github.com/leanflutter/screen_retriever/blob/main/packages/screen_retriever_platform_interface",
+      "advisories": {
+        "advisories": [],
+        "advisoriesUpdated": "1970-01-01T00:00:00.000"
+      },
+      "metadataUrl": "https://pub.dev/api/packages/screen_retriever_platform_interface/versions/0.2.1"
+    },
+    {
+      "name": "screen_retriever_windows",
+      "version": "0.2.1",
+      "archiveSha256": "c44b38a4c4bab34af259180a70a4eee1e29384e7b82e627c9faa68afcdab2e73",
+      "repository": "https://github.com/leanflutter/screen_retriever/tree/main/packages/screen_retriever_windows",
+      "homepage": null,
+      "advisories": {
+        "advisories": [],
+        "advisoriesUpdated": "1970-01-01T00:00:00.000"
+      },
+      "metadataUrl": "https://pub.dev/api/packages/screen_retriever_windows/versions/0.2.1"
+    },
+    {
+      "name": "source_span",
+      "version": "1.10.2",
+      "archiveSha256": "56a02f1f4cd1a2d96303c0144c93bd6d909eea6bee6bf5a0e0b685edbd4c47ab",
+      "repository": "https://github.com/dart-lang/tools/tree/main/pkgs/source_span",
+      "homepage": null,
+      "advisories": {
+        "advisories": [],
+        "advisoriesUpdated": "1970-01-01T00:00:00.000"
+      },
+      "metadataUrl": "https://pub.dev/api/packages/source_span/versions/1.10.2"
+    },
+    {
+      "name": "stack_trace",
+      "version": "1.12.2",
+      "archiveSha256": "277654b3034d17ac6f9f1cb5595db011b1d5d41e8806866db28e0abaa101c490",
+      "repository": "https://github.com/dart-lang/tools/tree/main/pkgs/stack_trace",
+      "homepage": null,
+      "advisories": {
+        "advisories": [],
+        "advisoriesUpdated": "1970-01-01T00:00:00.000"
+      },
+      "metadataUrl": "https://pub.dev/api/packages/stack_trace/versions/1.12.2"
+    },
+    {
+      "name": "stream_channel",
+      "version": "2.1.4",
+      "archiveSha256": "969e04c80b8bcdf826f8f16579c7b14d780458bd97f56d107d3950fdbeef059d",
+      "repository": "https://github.com/dart-lang/tools/tree/main/pkgs/stream_channel",
+      "homepage": null,
+      "advisories": {
+        "advisories": [],
+        "advisoriesUpdated": "1970-01-01T00:00:00.000"
+      },
+      "metadataUrl": "https://pub.dev/api/packages/stream_channel/versions/2.1.4"
+    },
+    {
+      "name": "string_scanner",
+      "version": "1.4.1",
+      "archiveSha256": "921cd31725b72fe181906c6a94d987c78e3b98c2e205b397ea399d4054872b43",
+      "repository": "https://github.com/dart-lang/tools/tree/main/pkgs/string_scanner",
+      "homepage": null,
+      "advisories": {
+        "advisories": [],
+        "advisoriesUpdated": "1970-01-01T00:00:00.000"
+      },
+      "metadataUrl": "https://pub.dev/api/packages/string_scanner/versions/1.4.1"
+    },
+    {
+      "name": "term_glyph",
+      "version": "1.2.2",
+      "archiveSha256": "7f554798625ea768a7518313e58f83891c7f5024f88e46e7182a4558850a4b8e",
+      "repository": "https://github.com/dart-lang/tools/tree/main/pkgs/term_glyph",
+      "homepage": null,
+      "advisories": {
+        "advisories": [],
+        "advisoriesUpdated": "1970-01-01T00:00:00.000"
+      },
+      "metadataUrl": "https://pub.dev/api/packages/term_glyph/versions/1.2.2"
+    },
+    {
+      "name": "test_api",
+      "version": "0.7.12",
+      "archiveSha256": "2a122cbe059f8b610d3a5415f42e255b6c17b1f21eee1d960f31080237fb4f11",
+      "repository": "https://github.com/dart-lang/test/tree/master/pkgs/test_api",
+      "homepage": null,
+      "advisories": {
+        "advisories": [],
+        "advisoriesUpdated": "1970-01-01T00:00:00.000"
+      },
+      "metadataUrl": "https://pub.dev/api/packages/test_api/versions/0.7.12"
+    },
+    {
+      "name": "vector_math",
+      "version": "2.4.0",
+      "archiveSha256": "1d774bbdf6b72a0b12122fc1560c9c2d2a67db5a4a4cc2bd8a5c990ab20e3188",
+      "repository": "https://github.com/flutter/core-packages/tree/main/packages/vector_math",
+      "homepage": null,
+      "advisories": {
+        "advisories": [],
+        "advisoriesUpdated": "1970-01-01T00:00:00.000"
+      },
+      "metadataUrl": "https://pub.dev/api/packages/vector_math/versions/2.4.0"
+    },
+    {
+      "name": "vm_service",
+      "version": "15.3.0",
+      "archiveSha256": "5f37239c4851efcef929cea7824e76df7f2f0970aef85d66bbc430afa40e72f0",
+      "repository": "https://github.com/dart-lang/sdk/tree/main/pkg/vm_service",
+      "homepage": null,
+      "advisories": {
+        "advisories": [],
+        "advisoriesUpdated": "1970-01-01T00:00:00.000"
+      },
+      "metadataUrl": "https://pub.dev/api/packages/vm_service/versions/15.3.0"
+    },
+    {
+      "name": "window_manager",
+      "version": "0.5.1",
+      "archiveSha256": "7eb6d6c4164ec08e1bf978d6e733f3cebe792e2a23fb07cbca25c2872bfdbdcd",
+      "repository": "https://github.com/leanflutter/window_manager",
+      "homepage": "https://leanflutter.dev",
+      "advisories": {
+        "advisories": [],
+        "advisoriesUpdated": "1970-01-01T00:00:00.000"
+      },
+      "metadataUrl": "https://pub.dev/api/packages/window_manager/versions/0.5.1"
+    }
+  ],
+  "installNotes": "Metadata and advisories checked against pub.dev; package resolution is performed separately. No install scripts are run by this audit. Windows plugin CMake files inspected: local compilation only; screen_retriever example-only GoogleTest FetchContent is disabled in this app."
+}

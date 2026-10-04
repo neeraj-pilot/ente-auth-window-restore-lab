@@ -1,0 +1,56 @@
+name: Windows lab (test only)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  windows:
+    runs-on: windows-2022
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Install pinned Flutter SDK
+        shell: pwsh
+        run: |
+          $archive = Join-Path $env:RUNNER_TEMP 'flutter.zip'
+          Invoke-WebRequest 'https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.47.2-stable.zip' -OutFile $archive
+          $expected = '37934f2128a55d77a38baba12fd611157ed23a47bf7d2b7d17e9e84da118409d'
+          if ((Get-FileHash $archive -Algorithm SHA256).Hash.ToLowerInvariant() -ne $expected) { throw 'Flutter SDK checksum mismatch' }
+          Expand-Archive $archive -DestinationPath $env:RUNNER_TEMP
+          Join-Path $env:RUNNER_TEMP 'flutter/bin' | Out-File -Append $env:GITHUB_PATH
+      - name: Resolve locked dependencies
+        run: flutter pub get --enforce-lockfile
+      - name: Check dependency provenance and advisories
+        run: python scripts/audit_dependencies.py
+      - name: Format, analyze, and unit checks
+        shell: pwsh
+        run: |
+          dart format --output=none --set-exit-if-changed lib test
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          flutter analyze --no-pub
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          flutter test --no-pub --reporter expanded
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Build Windows release sample
+        run: flutter build windows --release --no-pub
+      - name: Native window restart checks
+        shell: pwsh
+        run: ./scripts/windows-check.ps1
+      - name: Bundle sample
+        if: always()
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force results | Out-Null
+          flutter --version | Set-Content results/flutter-version.txt
+          Copy-Item evidence/dependencies.json results/dependencies.json
+          if (Test-Path build/windows/x64/runner/Release) {
+            Compress-Archive -Path build/windows/x64/runner/Release/* -DestinationPath results/windows-sample.zip
+          }
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        if: always()
+        with:
+          name: auth-window-restoration-windows
+          path: results/
+          retention-days: 14
